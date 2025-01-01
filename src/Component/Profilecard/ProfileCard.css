@@ -1,0 +1,243 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #1a1a1c; /* Dark background */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Centered Layout */
+.profile-container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items vertically */
+    max-width: 90%;
+    margin: 0 auto;
+    margin-left: 100px;
+    padding: 20px;
+}
+
+.text-container {
+    flex: 1;
+    text-align: left; /* Align text to the left */
+    margin-right: 30px; /* Space between image and text */
+}
+
+.name {
+    font-size: 40px; /* Increased size */
+    font-weight: 600;
+    color: #a359a0; /* Purple color for the name */
+    margin: 0;
+}
+
+.text h2 {
+    color: #ffffff; /* White color for the profession text */
+    font-size: 28px; /* Increased size */
+    font-weight: 500;
+}
+
+.changing-text {
+    color: #a359a0; /* Purple color for changing text */
+    font-weight: 600;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 220px; /* Increased size */
+    height: 220px; /* Increased size */
+    border-radius: 50%;
+    border: 5px solid #a359a0;
+    overflow: hidden;
+    margin: 0 50px; /* Space around image */
+    background: radial-gradient(circle, #9a7499 0%, #a359a0 70%, transparent 100%);
+    box-shadow: 0 0 50px 20px rgba(255, 101, 250, 0.5),
+                0 0 100px 40px rgba(163, 89, 160, 0.3);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Quotes Section */
+.quote {
+    font-size: 40px;
+    margin-top: -100px;
+    color: #ffff; /* White for the quote text */
+    margin-bottom: 70px;
+    font-weight: 800; /* Heavy weight */
+}
+
+.text-cloud {
+    color: #a359a0;
+    margin: 6px;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+.contact-btn,
+.cv-btn {
+    background-color: #a359a0; /* Purple button */
+    color: #e7e7e5; /* Light text on buttons */
+    border: none;
+    padding: 18px 40px; /* Increased padding */
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px; /* Increased font size */
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover,
+.cv-btn:hover {
+    background-color: #6d5f6c; /* Darken button on hover */
+    color: #e7e7e5; /* Maintain light text color on hover */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Change to vertical */
+    align-items: center;
+    position: absolute;
+    top: 225px;
+    right: 20px;
+}
+
+.social-icons a {
+    color: #a359a0; /* Purple color for social icons */
+    font-size: 48px; /* Increased size for icons */
+    margin: 15px 0; /* Space between icons */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #6d5f6c;
+    box-shadow: 4px solid #a359a0; /* Darken icons on hover */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .profile-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .text-container {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .profile-picture {
+        width: 200px;
+        height: 200px;
+    }
+
+    .name {
+        font-size: 36px;
+    }
+
+    .text h2 {
+        font-size: 24px;
+    }
+
+    .contact-btn,
+    .cv-btn {
+        padding: 14px 28px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .text-container {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .text h2 {
+        font-size: 22px;
+    }
+
+    .contact-btn,
+    .cv-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .social-icons {
+        top: 180px;
+        right: 15px;
+    }
+
+    .social-icons a {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .text-container {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .text h2 {
+        font-size: 18px;
+    }
+
+    .contact-btn,
+    .cv-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .quote {
+        font-size: 24px; /* Reduce size for phones */
+        margin-top: -50px; /* Adjust spacing */
+        margin-bottom: 40px; /* Adjust spacing */
+    }
+
+    .social-icons {
+        top: 150px;
+        right: 10px;
+    }
+
+    .social-icons a {
+        font-size: 32px;
+    }
+}
